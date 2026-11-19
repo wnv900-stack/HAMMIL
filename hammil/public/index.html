@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b09">
+  <meta name="description" content="HAMMIL - عاين روابط الفيديو وافتح خيارات التنزيل المتاحة بشكل آمن.">
+  <title>حَمِّل | HAMMIL</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="HAMMIL الصفحة الرئيسية">حَمِّل<span>.</span></a>
+    <div class="top-note"><i></i> روابطك في مكان واحد</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">HAMMIL MEDIA HUB</div>
+      <h1>محتواك، <span>بسهولة.</span></h1>
+      <p>ألصق رابط الفيديو لمعاينته ومعرفة خيارات الوصول والتنزيل المتاحة.</p>
+
+      <form id="link-form" class="link-box">
+        <label class="sr-only" for="video-url">رابط الفيديو</label>
+        <input id="video-url" type="url" inputmode="url" autocomplete="url"
+          placeholder="ألصق رابط الفيديو هنا..." maxlength="2048" required>
+        <button id="submit-btn" type="submit"><span>معاينة الرابط</span><b>←</b></button>
+      </form>
+      <p class="hint">لا نطلب كلمة مرور حسابك، ولا نتجاوز إعدادات الخصوصية أو حماية المنصات.</p>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="result-head">
+        <div><span class="mini-label">نتيجة الرابط</span><h2 id="platform-name">معاينة المقطع</h2></div>
+        <span id="status" class="status">تم الفحص</span>
+      </div>
+      <div id="preview" class="preview">
+        <div class="preview-placeholder">ستظهر المعاينة هنا</div>
+      </div>
+      <p id="result-message" class="result-message"></p>
+      <div class="actions">
+        <a id="open-link" class="button secondary" href="#" target="_blank" rel="noopener noreferrer">فتح المصدر الأصلي ↗</a>
+        <a id="download-link" class="button primary hidden" href="#" target="_blank" rel="noopener noreferrer">فتح ملف الوسائط ↗</a>
+      </div>
+    </section>
+
+    <section class="platform-section">
+      <div class="section-heading"><span class="mini-label">منصات متعددة</span><h2>من أين رابطك؟</h2></div>
+      <div class="platform-grid">
+        <div class="platform-card"><span class="platform-icon tiktok">♪</span><b>TikTok</b><small>مقاطع عامة وتضمين</small></div>
+        <div class="platform-card"><span class="platform-icon instagram">◎</span><b>Instagram</b><small>ريلز وروابط عامة</small></div>
+        <div class="platform-card"><span class="platform-icon snap">◉</span><b>Snapchat</b><small>روابط عامة</small></div>
+        <div class="platform-card"><span class="platform-icon youtube">▶</span><b>YouTube</b><small>معاينة ومشاركة رسمية</small></div>
+        <div class="platform-card"><span class="platform-icon">f</span><b>Facebook</b><small>روابط عامة</small></div>
+        <div class="platform-card"><span class="platform-icon">𝕏</span><b>X / Twitter</b><small>فتح المصدر</small></div>
+        <div class="platform-card"><span class="platform-icon">P</span><b>Pinterest</b><small>فتح المصدر</small></div>
+        <div class="platform-card"><span class="platform-icon">◌</span><b>Reddit</b><small>فتح المصدر</small></div>
+      </div>
+    </section>
+
+    <section class="info">
+      <h2>كيف يعمل حَمِّل؟</h2>
+      <div class="info-grid">
+        <article><strong>01</strong><h3>ألصق الرابط</h3><p>أدخل رابطاً عاماً من إحدى المنصات المدعومة.</p></article>
+        <article><strong>02</strong><h3>عاين المحتوى</h3><p>نتعرف على المنصة ونوفر المعاينة حيث تسمح بذلك.</p></article>
+        <article><strong>03</strong><h3>اختر الطريقة المتاحة</h3><p>استخدم التنزيل المباشر أو خيارات المنصة الرسمية إذا كانت متاحة.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span class="brand">حَمِّل<span>.</span></span><p>HAMMIL © <span id="year"></span> — استخدم الخدمة للمحتوى الذي تملك حق الوصول إليه.</p></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
